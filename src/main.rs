@@ -27,7 +27,7 @@ fn main() {
     }
 
     let mut responses = vec![];
-    for chunk in galleries.chunks(50) {
+    for chunk in galleries.chunks(25) {
         sleep(Duration::from_secs(1));
         if let Some(response) = Api::new(&client, chunk) {
             responses.extend(response.gmetadata);
